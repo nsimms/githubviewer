@@ -1,0 +1,9 @@
+<div ng-controller="RepoController">
+    <a href="#/main">Back to search</a><br/><a href="#/user/{{ownerlogin}}">Bac to Results</a>
+  <h1>Repo Name is</h1> {{name}}
+  <h1>Open Issues Count</h1> {{open_issues_count}}
+
+  <div ng-repeat="c in contributors">
+    <img ng-src="{{c.avatar_url}}">
+  </div>
+</div>

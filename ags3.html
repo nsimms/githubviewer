@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="ags3.js"></script>
+</head>
+
+<body>
+  <div ng-controller="mainCtrl as vm">
+    <h1>{{vm.message}}</h1>
+    <form name="namesearch" ng-submit="search(username)">
+      <input type="search" placeholder="username to find" required ng-model="username">
+      <input type="submit" value="search">
+    </form>
+
+    <div ng-include="'userdetails.html'" ng-show="person">
+
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="ags2.js"></script>
+  </head>
+
+  <body >
+    <div ng-controller="main as vm">
+    <h1>{{vm.message}}</h1>
+    
+    <div>{{person.firstName}}</div>
+    <div>{{person.lastName}}</div>
+    <div style='background-color:blue'><img ng-src={{person.imageSrc}} title='Upfront'></div>
+    </div>
+  </body>
+
+</html>

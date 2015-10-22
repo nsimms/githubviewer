@@ -1,0 +1,30 @@
+      <div id="userDetails">{{person.firstName}}</div>
+      <div>{{person.lastName}}</div>
+      Order By:
+      <select ng-model="reposOrderBy">
+        <option value="+name">Name</option>
+        <option value="-stargazers_count">Stars</option>
+        <option value="+language">Language</option>
+      </select>
+
+      <table ng-show="repos">
+        <thead>
+          <tr>repos
+            <th>Name</th>
+            <th>Stars</th>
+            <th>Other</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="repo in repos | orderBy:reposOrderBy">
+            <td>{{repo.name}}</td>
+            <td>{{repo.stargazers_count | number}}</td>
+            <td>{{repo.language}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <div style='background-color:blue' ng-show="person">
+        <img ng-src={{person.imageSrc}} title='Upfront'>
+      </div>
